@@ -30,27 +30,30 @@ const StatsSubject = styled.h4`
 `;
 
 const StatsContainer = ({ defaultStats }) => {
+
+  console.log(defaultStats, "defaultStats");
+
   const { user } = useDashboardContext(); 
   const [date, setDate] = useState(new Date());
 
   const stats = [
     {
       title: "ยังไม่ทำกายภาพ",
-      count: `${defaultStats?.กำลังรักษา || 0} คน`,
+      count: `${defaultStats?.ผู้ป่วยที่ยังไม่ทำกายภาพบำบัด || 0} คน`,
       icon: <GiHeartPlus />,
       color: "#f8ba51",
       bcg: "#fcefc7",
     },
     {
       title: "ทำกายภาพแล้ว",
-      count: `${defaultStats?.จบการรักษา || 0} คน`,
+      count: `${defaultStats?.ผู้ป่วยที่ทำกายภาพบำบัด || 0} คน`,
       icon: <FaCalendarCheck />,
       color: "#72DA95",
       bcg: "#b6ffce91",
     },
     {
-      title: "ผู้ป่วยที่ทำกายภาพบำบัด",
-      count: `${defaultStats?.ผู้ป่วยที่ทำกายภาพบำบัด || 0} คน`,
+      title: "ผู้ป่วยทั้งหมด",
+      count: `${defaultStats?.ผู้ป่วยทั้งหมด || 0} คน`,
       icon: <IoPeople />,
       color: "#87CEFA",
       bcg: "#87cefa44",

@@ -31,6 +31,8 @@ const AllPatientContext = createContext();
 
 const AllPatient = () => {
     const { data, searchValues } = useLoaderData();
+
+    console.log(searchValues, "searchValues");
     const navigate = useNavigate();
     const [selectedDate, setSelectedDate] = useState(new Date());
 
