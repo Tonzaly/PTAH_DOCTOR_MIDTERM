@@ -52,6 +52,7 @@ const PostureCard = ({ name, answers, suggestion }) => {
     </div>
   );
 };
+
 const EvaluatePatient = () => {
   const { date, _id } = useParams();
   const navigate = useNavigate();
