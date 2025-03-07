@@ -28,6 +28,7 @@ export const getAllPatients = async (req, res) => {
     ];
   }
 
+  
   if (userStatus === "คนไข้ที่ขาดการทำกายภาพบำบัด") {
     try {
       const allPatients = await Patient.find(queryObject).select("_id name surname username");
